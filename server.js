@@ -10,6 +10,10 @@ import { payDriver } from "./b2c.js";
 const app = express();
 app.use(bodyParser.json());
 
+app.get("/", (req, res) => {
+  res.send("🚖 VinCab Payments API is running!");
+});
+
 // Rider starts trip (send STK)
 app.post("/pay", async (req, res) => {
   const { phone, amount, tripId } = req.body;
