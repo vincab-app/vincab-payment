@@ -12,7 +12,7 @@ export const payDriver = async (driverPhone, amount) => {
     SecurityCredential: process.env.SECURITY_CREDENTIAL, // encrypted password
     CommandID: "BusinessPayment",
     Amount: amount,
-    PartyA: process.env.SHORTCODE, // your paybill/till
+    PartyA: process.env.SHORTCODE2, // your paybill/till
     PartyB: driverPhone,
     Remarks: "VinCab Driver Payout",
     QueueTimeOutURL: process.env.TIMEOUT_URL,
